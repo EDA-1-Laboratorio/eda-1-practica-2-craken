@@ -42,6 +42,13 @@ int main() {
         // Caso B: Si *actual es mayor que *max2 (pero menor que max1)...
         //         max2 apunta al actual.
         // -----------------------
+        if (*actual>*max1){
+            max2=max1;
+            max1=actual;
+        }
+        else if (*actual>*max2 && *actual<*max1){
+            max2=actual;
+        }  
     }
 
     // 3. Cálculo de distancia
@@ -56,6 +63,7 @@ int main() {
 
     return 0;
 }
+
 
 // PREGUNTA: Si el max1 se encuentra en la dirección 0x100 y el max2 en la 0x108,
 // y estamos trabajando con enteros (int) de 4 bytes, 

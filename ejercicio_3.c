@@ -18,6 +18,11 @@ int main() {
 
     // --- TU CÓDIGO AQUÍ ---
     // Usa 'p' para recorrer 'bin' y contar los '1's
+    p = &bin[0];
+    while (*p != '\0') {
+        if (*p == '1') unos++;
+        p++;
+    }
 
     printf("Total de bits '1': %d\n", unos);
     return 0;
